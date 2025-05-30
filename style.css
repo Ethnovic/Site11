@@ -169,3 +169,99 @@ footer p {
 span{
     color: #BAA7FF
 }
+
+.hamburger {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #BAA7FF;
+}
+.hamburger:hover {
+    color: #6958AD; /* Couleur de survol pour l'icône hamburger */
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 10px 20px;
+}
+#Menu{
+    color: #7D66D9;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+#Menu:hover{
+    color: #33255B;
+}
+.bar{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.bar{
+    display: none;
+    flex-direction: column;
+    background: #14121F;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 200px;
+    padding: 10px 0;
+    height: 100%;
+}
+.bar.show{
+    display: flex;
+
+}
+.has-submenu {
+  position: relative;
+}
+.has-submenu > a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.has-submenu .submenu {
+  display: none;
+  position: absolute;
+  background: #14121F; /* Couleur de fond du sous-menu */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+.has-submenu.open .submenu {
+  display: block;
+}
+.has-submenu .submenu li a {
+  color: #E2DDFE; /* Couleur du texte des liens du sous-menu */
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+.has-submenu .submenu li a:hover {
+  background: #6958AD; /* Couleur de survol du sous-menu */
+}
+.has-submenu > a .fa-caret-down {
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+.has-submenu.open > a .fa-caret-down {
+  transform: rotate(-180deg);
+}
+@media (max-width: 768px) {
+  .has-submenu .submenu {
+    position: static;
+    min-width: unset;
+  }
+}
+.menu2 {
+    background-color: #1B1525; /* Même fond que .container */
+    border: 1px solid #33255B; /* Même bordure */
+    border-radius: 8px;        /* Même arrondi */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Optionnel : petite ombre */
+    padding: 10px 0;
+}
